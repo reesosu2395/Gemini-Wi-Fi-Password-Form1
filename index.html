@@ -78,10 +78,12 @@
                 body: JSON.stringify(payload)
             });
             status.style.color = "green";
-            status.innerText = "Form submitted successfully!";
+            status.innerText = "Form submitted successfully! Redirecting..."; // Updated status text
             document.querySelectorAll('input').forEach(i => i.value = "");
+            
             // --- REDIRECT ADDED HERE ---
             window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1";
+
         } catch (e) {
             status.style.color = "red";
             status.innerText = "Error sending form.";
